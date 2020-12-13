@@ -1,0 +1,109 @@
+@import "./assets/styling/variables";
+@import "./assets/arrow/arrow";
+@import "./components/Landing/landing";
+@import "./containers/Layout/layout";
+@import "./components/Nav/navigation";
+@import "./components/About/about";
+@import "./components/Contact/contact";
+@import "./assets/section-label/sectionLabel";
+@import "./components/Projects/projects";
+@import "./assets/dot/dot";
+
+h1 {
+  font-family: 'Teko', monospace;
+  font-weight: normal;
+  font-size: 70px;
+
+  @media only screen and (min-width: 700px) {
+    font-size: 100px;
+  }
+}
+
+h2,
+h3,
+h4,
+h5 {
+  color: $primary;
+  font-family: 'Coda', monospace;
+}
+
+a,
+p,
+li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: $secondary;
+}
+
+hr {
+  border: 1px solid $secondary-accent;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $tertiary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(78, 157, 151, 0.7);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $accent;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  border-radius: 10px;
+  background: $primary;
+  height: 60px;
+  width: 60px;
+  opacity: 0.7;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  cursor: pointer;
+
+  .top-button {
+    height: 50px;
+    width: 50px;
+    color: $secondary;
+  }
+}
+
+.top:hover {
+  opacity: 1;
+}
+
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

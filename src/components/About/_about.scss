@@ -1,0 +1,101 @@
+#About {
+    height: 100%;
+    width: 100vw;
+
+    .about-me-container {
+        flex-direction: column;
+        height: 100%;
+        max-width: 1200px;
+        width: 80%;
+
+        .inner-container {
+            display: flex;
+            flex-direction: column;
+            margin: 50px;
+            height: 100%;
+
+            @media only screen and (min-width: 700px) {
+                flex-direction: row;
+            }
+
+            .image-container {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+
+                @media only screen and (min-width: 700px) {
+                    justify-content: flex-start;
+                }
+
+                .my-photo {
+                    height: 300px;
+                    width: 300px;
+                    position: absolute;
+                    margin-top: 30px;
+                }
+
+                .square {
+                    height: 300px;
+                    width: 300px;
+                    margin-bottom: 30px;
+                    margin-left: 30px;
+                    background-color: $secondary;
+                }
+            }
+            
+            .right-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                .about-title {
+                    display: flex;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    @media only screen and (min-width: 700px) {
+                        margin-left: 20px;
+                    }
+                }
+
+                .text-container {
+                    background: $tertiary;
+                    width: 100%;
+                    max-width: 90%;
+                    padding: 10px;
+
+                    @media only screen and (min-width: 700px) {
+                        padding: 30px;
+                        max-width: 1500px;
+                    }
+    
+                    .tldr {
+                        h2 {
+                            font-size: 30px;
+
+                            @media only screen and (min-width: 700px) {
+                                font-size: 36px;
+                            }
+                        }
+    
+                        ul {
+                            list-style-type: none;
+                        }
+    
+                        li {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                            @media only screen and (min-width: 700px) {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .description{
+            margin-bottom: 150px;
+        }
+    }
+}

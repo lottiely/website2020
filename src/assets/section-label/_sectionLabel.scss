@@ -1,0 +1,61 @@
+.sectionLabel{
+    font-family: 'Teko', monospace;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: row;
+
+    @media only screen and (min-width: 700px) {
+        letter-spacing: 10px;
+    }
+    
+    h1{
+        margin: 0;
+        margin-top: 10px;
+        padding:0;
+    }
+}
+
+.darkGreen{
+    color: $secondary;
+}
+
+.lightGreen{
+    color: $primary;
+}
+
+.dots {
+    display: inline-block;
+    .dot{
+        height:10px;
+        width:10px;
+        background-color:$accent;
+        border-radius:50%;
+        display: inline-block;
+        margin: 10px;
+        margin-bottom: 0;
+        animation: wave 1s infinite;
+
+        &:nth-child(1) {
+            animation-delay: -0.5s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+
+        @media only screen and (min-width: 700px) {
+            height: 15px;
+            width: 15px;
+        }
+    }
+}
+
+@keyframes wave {
+	0%, 60%, 100% {
+		transform: initial;
+	}
+
+	30% {
+		transform: translateY(-15px);
+	}
+}

@@ -1,0 +1,123 @@
+#Nav {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+
+    @media only screen and (min-width: 700px) {
+        right: 20px;
+        width: auto;
+        height: auto;
+        background: transparent;
+    }
+
+    .nav-icon {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        padding: 10px 20px;
+        color: $primary;
+        cursor: pointer;
+        z-index: 100;
+
+        @media only screen and (min-width: 700px) {
+            display: none;
+        }
+    }
+
+    nav {
+        position: absolute;
+        height: 100%;
+        width: 80%;
+        background: $secondary;
+        z-index: 2;
+        box-sizing: border-box;
+        transition: transform 0.3s ease-out;
+
+        @media only screen and (min-width: 700px) {
+            width: auto;
+            height: auto;
+            background: transparent;
+            padding: 0;
+            display: block;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            @media only screen and (min-width: 700px) {
+                flex-direction: row;
+                justify-content: flex-end;
+                width: auto;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                height: 100px;
+                width: 100%;
+            }
+
+            a:hover{
+                background-color: $tertiary;
+
+                li {
+                    color: $secondary;
+                    @media only screen and (min-width: 700px) {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            font-size: 36px;
+            padding-left: 50px;
+            padding-bottom: 0;
+            color: $primary;
+            cursor: pointer;
+
+            @media only screen and (min-width: 700px) {
+                display: inline;
+                padding: 10px;
+                color: $secondary;
+            }
+        }
+
+        li:hover {
+            @media only screen and (min-width: 700px) {
+                border-bottom: 2px solid $primary;
+            }
+        }
+    }
+}
+
+.backdrop {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+}
+
+.removeBackdrop{
+    background: transparent;
+    position: absolute;
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.close {
+    transform: translateX(+100%);
+}

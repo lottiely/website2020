@@ -1,0 +1,54 @@
+#Projects{
+    flex-direction: column;
+    background: $tertiary;
+    padding-top: 50px;
+    .main-container{
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 50px;
+        .image-details{
+            width: 100%;
+            flex-direction: column;
+            margin-bottom: 50px;
+
+            .project-image{
+                width: 100%;
+            }
+
+            .image-dots{
+                .dot {
+                    background: $primary;
+                    opacity: 0.6;
+                }
+                .dot:hover{
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+        .text-details{
+            width: 100%;
+            background: white;
+            padding: 30px;
+            margin-bottom: 100px;
+
+            h2{
+                font-size: 30px;
+            }
+
+            .tech-details{
+                list-style: none;
+                padding: 0;
+                h3{
+                    margin:0;
+                }
+                span {
+                    font-weight: normal;
+                    color: $secondary;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
