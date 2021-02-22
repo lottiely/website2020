@@ -44,7 +44,7 @@ class Projects extends Component {
                                 <p>Fortune Bot is an API that will allow the user to enter in a fortune and its author into the database.
                                 The API calls allow the user to create, approve, or delete a fortune.
                            This was a group project where I created the API for Fortune Bot in Python and Flask, and I used unit testing with PyTest for a code coverage of 91%.</p>
-                           <div className="image-details">
+                           <div className="image-details center">
                                 <img className="project-image" src={fortune} alt="project" />
                             </div>
                            {/*<p>[Click for Details]</p>*/}
