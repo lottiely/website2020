@@ -8,22 +8,24 @@ class Navigation extends Component {
     state = {
         navIcon: faBars,
         navClass: "close",
-        backdrop: "removeBackdrop"
+        backdrop: "removeBackdrop",
+        navPosition: "absolute"
     }
-    
+
     sideDrawerToggleHandler = () => {
         this.props.sideDrawerToggleHandler();
-        console.log(this.props.showNav);
         let newNavIcon = this.props.showNav ? faTimes : faBars;
-            let newNavClass = this.props.showNav ? "open" : "close";
-            let newBackdrop = this.props.showNav ? "backdrop" : "removeBackdrop";
-        this.setState( {navIcon: newNavIcon, navClass: newNavClass, backdrop: newBackdrop} );
+        let newNavClass = this.props.showNav ? "open" : "";
+        let newBackdrop = this.props.showNav ? "backdrop" : "";
+        let newNavPosition = this.props.showNav ? "fixed" : "absolute";
+        this.setState({ navIcon: newNavIcon, navClass: newNavClass, backdrop: newBackdrop, navPosition: newNavPosition });
     }
 
     render() {
         return (
-            <div id="Nav" className={this.state.backdrop}>
+            <div id="Nav" className={this.state.navPosition}>
                 <FontAwesomeIcon onClick={this.sideDrawerToggleHandler} className="nav-icon" icon={this.state.navIcon} />
+                <div className={this.state.backdrop}></div>
                 <nav className={this.state.navClass}>
                     <ul className="nav center">
                         <Link
@@ -51,6 +53,30 @@ class Navigation extends Component {
                         >
                             <li>Projects</li>
                         </Link>
+                        {/*<Link
+                            className="project-item"
+                            activeClass="active"
+                            to=""
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={200}
+                            onClick={this.sideDrawerToggleHandler}
+                        >
+                            <li>Stepsister's Story</li>
+                        </Link>
+                        <Link
+                            className="project-item"
+                            activeClass="active"
+                            to=""
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={200}
+                            onClick={this.sideDrawerToggleHandler}
+                        >
+                            <li>FortuneBot</li>
+                        </Link>*/}
                         <Link
                             activeClass="active"
                             to="Contact"

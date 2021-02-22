@@ -22,6 +22,7 @@
                 height: 100%;
                 display: flex;
                 justify-content: center;
+                z-index: -1;
 
                 @media only screen and (min-width: 700px) {
                     justify-content: flex-start;
@@ -32,6 +33,7 @@
                     width: 300px;
                     position: absolute;
                     margin-top: 30px;
+                    z-index: 1;
                 }
 
                 .square {
@@ -63,6 +65,9 @@
                     width: 100%;
                     max-width: 90%;
                     padding: 10px;
+                    strike {
+                        text-decoration: line-through 1.5px $primary;
+                    }
 
                     @media only screen and (min-width: 700px) {
                         padding: 30px;

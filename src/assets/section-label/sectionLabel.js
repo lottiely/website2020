@@ -18,9 +18,9 @@ const sectionLabel = (props) => {
         <div className="sectionLabel">
             <h1>{renderTitle()}
             <div className="dots">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
+                <span className="dot animate"></span>
+                <span className="dot animate"></span>
+                <span className="dot animate"></span>
             </div>
             </h1>
         </div>

@@ -20,14 +20,14 @@ class Layout extends Component {
     render() {
         return (
             <Auxiliary className="layout">
-                    <Nav
-                        showNav={this.state.showNav}
-                        sideDrawerClosedHandler={this.sideDrawerClosedHandler}
-                        sideDrawerToggleHandler={this.sideDrawerToggleHandler}
-                    />
-                    <main>
-                        {this.props.children}
-                    </main>
+                <Nav
+                    showNav={this.state.showNav}
+                    sideDrawerClosedHandler={this.sideDrawerClosedHandler}
+                    sideDrawerToggleHandler={this.sideDrawerToggleHandler}
+                />
+                <main>
+                    {this.props.children}
+                </main>
             </Auxiliary>
         )
     }

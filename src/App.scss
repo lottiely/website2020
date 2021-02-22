@@ -1,13 +1,14 @@
 @import "./assets/styling/variables";
 @import "./assets/arrow/arrow";
+@import "./assets/dot/dot";
+@import "./assets/modal/modal";
+@import "./assets/section-label/sectionLabel";
 @import "./components/Landing/landing";
 @import "./containers/Layout/layout";
 @import "./components/Nav/navigation";
 @import "./components/About/about";
 @import "./components/Contact/contact";
-@import "./assets/section-label/sectionLabel";
 @import "./components/Projects/projects";
-@import "./assets/dot/dot";
 
 h1 {
   font-family: 'Teko', monospace;
